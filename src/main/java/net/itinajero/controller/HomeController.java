@@ -101,8 +101,8 @@ public class HomeController {
 	public String buscar(@ModelAttribute("search") Vacante vacante, Model model) {
 		System.out.println("Buscando por : " + vacante);
 		
+		// para cambiar en la consulta descripcion "=" por LIKE
 		ExampleMatcher matcher = ExampleMatcher.
-				// where descripcion like '%?%'
 				matching().withMatcher("descripcion", ExampleMatcher.GenericPropertyMatchers.contains());
 		
 		Example<Vacante> example = Example.of(vacante,matcher);
