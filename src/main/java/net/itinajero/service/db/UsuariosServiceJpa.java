@@ -25,4 +25,7 @@ public class UsuariosServiceJpa implements IUsuariosService {
 		return usuariosRepo.findAll();
 	}
 
+	public Usuario buscarPorUsername(String username) {
+		return usuariosRepo.findByUsername(username);
+	}
 }

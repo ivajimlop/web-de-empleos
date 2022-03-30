@@ -25,6 +25,7 @@ public class Vacante {
 	private String imagen="no-image.png";
 	private String estatus;
 	private String detalles;
+	
 	//@Transient
 	@OneToOne
 	@JoinColumn(name="idCategoria")

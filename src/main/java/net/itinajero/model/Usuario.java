@@ -29,6 +29,7 @@ public class Usuario {
 	private String password;
 	private Integer estatus;	
 	private Date fechaRegistro;
+	
 	@ManyToMany(fetch=FetchType.EAGER)
 	@JoinTable(name="UsuarioPerfil",
 			   joinColumns = @JoinColumn(name="idUsuario"),
